@@ -1,4 +1,3 @@
 #! /bin/bash
 
-npm install -g standard
-npm install -g react-native-cli
+cat ../software-list/frontend-dev-software.txt | xargs npm install -g

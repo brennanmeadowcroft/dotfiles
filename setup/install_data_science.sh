@@ -1,5 +1,3 @@
 #! /bin/bash
 
-brew install numpy
-brew install scipy
-brew install scikit-learn
+cat ../software-list/data-science-software.txt | xargs brew install
