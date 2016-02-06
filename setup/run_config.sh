@@ -8,7 +8,7 @@ rm ~/.bash_profile && ln -s $(pwd)/active/bash/.bash_profile ~/.bash_profile
 rm ~/.bashrc && ln -s $(pwd)/active/bash/.bashrc ~/.bashrc
 rm ~/.gitconfig && ln -s $(pwd)/active/git/.gitconfig ~/.gitconfig
 echo -e "\e[31mImportant! Don't forget to add email to .gitconfig\e[0m"
-rm ~/.zshrc && ln -s $(pwd)/active/zsh/.zshrc
+rm ~/.zshrc && ln -s $(pwd)/active/zsh/.zshrc ~/.zshrc
 
 if eval "apm"; then
   echo "Setting up Atom"

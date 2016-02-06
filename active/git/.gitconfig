@@ -1,6 +1,6 @@
 # This is Git's per-user configuration file.
 [user]
 	name = Brennan Meadowcroft
-	email = bmeadowcroft@itriagehealth.com 
+	email = brennan.meadowcroft@gmail.com 
 [core]
 	excludesfile = ~/.gitignore_global

@@ -5,9 +5,10 @@ This contains all the configuration necessary to get a new development machine u
 1. Clone this repository to the home directory (`~`)
 2. Run the setup script to copy the configuration files
 ```
-./setup_machine.sh
+source ./setup/install_base.sh
 ```
-3. If necesary, run the setup script with additional flags to install packages for a particular use case
+3. If necessary, run setup scripts for other types of work located in `/setup/`
+
 
 ## Setup Script
 The setup script will install and configure a new machine with necessary software and configuration.

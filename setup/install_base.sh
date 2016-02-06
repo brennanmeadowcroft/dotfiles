@@ -2,6 +2,7 @@
 
 if eval "brew -v"; then
   echo "Homebrew detected"
+  brew update
 else
   echo "Homebrew not detected... installing now"
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -17,7 +18,7 @@ else
 fi
 
 # Install NVM and node
-if eval "nvm -v"; then
+if eval "nvm --version"; then
   echo "NVM installed"
 else
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
@@ -26,9 +27,9 @@ else
 fi
 
 # Install base software
-cat ../software-list/homebrew-software.txt | brew install
-cat ../software-list/gems-software.txt | gem install
-cat ../software-list/npm-global-software.txt | npm install -g
+cat $(pwd)/software-list/homebrew-software.txt | xargs brew install
+cat $(pwd)/software-list/gems-software.txt | xargs gem install
+cat $(pwd)/software-list/npm-global-software.txt | xargs npm install -g
 
 echo "Installing OSX Xcode Command Line Tools"
 if eval "xcode-select -v"; then
