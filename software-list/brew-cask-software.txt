@@ -5,3 +5,6 @@ gpgtools
 fullcontact
 dropbox
 todoist
+alfred
+evernote
+dockertoolbox

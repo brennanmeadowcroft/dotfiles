@@ -6,4 +6,3 @@ watch
 zsh
 git
 tree
-docker-machine
