@@ -19,3 +19,21 @@
 [submodule "active/vim/bundle/vim-airline"]
 	path = active/vim/bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline
+[submodule "active/vim/bundle/vim-gitgutter"]
+	path = active/vim/bundle/vim-gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
+[submodule "active/vim/bundle/nerdcommenter"]
+	path = active/vim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "active/vim/bundle/vim-json"]
+	path = active/vim/bundle/vim-json
+	url = git@github.com:elzr/vim-json.git
+[submodule "active/vim/bundle/vim-fugitive"]
+	path = active/vim/bundle/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git
+[submodule "active/vim/bundle/syntastic"]
+	path = active/vim/bundle/syntastic
+	url = git@github.com:vim-syntastic/syntastic.git
+[submodule "active/vim/bundle/hardmode"]
+	path = active/vim/bundle/hardmode
+	url = git@github.com:wikitopian/hardmode.git
