@@ -1,0 +1,21 @@
+[submodule "active/vim/bundle/nerdtree"]
+	path = active/vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "active/other/fonts"]
+	path = active/other/fonts
+	url = git@github.com:powerline/fonts.git
+[submodule "active/vim/bundle/vim-colors-solarized"]
+	path = active/vim/bundle/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "active/vim/bundle/ctrlp.vim"]
+	path = active/vim/bundle/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "active/vim/bundle/vim-airline-themes"]
+	path = active/vim/bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "active/vim/bundle/vim-javascript"]
+	path = active/vim/bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "active/vim/bundle/vim-airline"]
+	path = active/vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline
