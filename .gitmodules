@@ -34,6 +34,3 @@
 [submodule "active/vim/bundle/hardmode"]
 	path = active/vim/bundle/hardmode
 	url = git@github.com:wikitopian/hardmode.git
-[submodule "active/other/fonts"]
-	path = active/other/fonts
-	url = git@github.com:powerline/fonts.git
