@@ -7,4 +7,11 @@ dropbox
 todoist
 alfred
 evernote
-dockertoolbox
+fantastical
+bettertouchtool
+anaconda
+1password
+sketch
+virtualbox
+private-internet-access
+atom

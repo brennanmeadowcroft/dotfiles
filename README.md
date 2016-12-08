@@ -7,8 +7,8 @@ This contains all the configuration necessary to get a new development machine u
 ```
 source ./setup/install_base.sh
 ```
-3. If necessary, run setup scripts for other types of work located in `/setup/`
-
+## Additional Software
+Some software is unable to be installed via a script.  At time of writing, this included XCode, Airmail and personal versions of MS Office.  These will need to be installed either through a downloaded installer or the App Store.
 
 ## Setup Script
 The setup script will install and configure a new machine with necessary software and configuration.
@@ -21,9 +21,6 @@ It looks to the txt files in the root directory to identify which software to in
 | `gems-software.txt`       | Ruby gems to be installed beyond those associated with a given project |
 | `npm-global-software.txt` | Global npm packages                                                    |
 
-Beyond basic installation, packages and software can be installed for a particular use case such as development or data science using `setup_machine.sh` and the appropriate flag.
-
-To see the commands available for installation, use `./setup_machine.sh --help`
 
 ## Configuration
 Configuration files are available for:
@@ -31,4 +28,5 @@ Configuration files are available for:
 - git
 - zsh
 - bash
-- Atom text editor
+- tmux
+- vim

@@ -30,6 +30,7 @@ fi
 cat $(pwd)/software-list/homebrew-software.txt | xargs brew install
 cat $(pwd)/software-list/gems-software.txt | xargs gem install
 cat $(pwd)/software-list/npm-global-software.txt | xargs npm install -g
+cat $(pwd)/software-list/brew-cask-software.txt | xargs brew cask install
 
 echo "Installing OSX Xcode Command Line Tools"
 if eval "xcode-select -v"; then
@@ -39,8 +40,8 @@ else
   xcode-select --install
 fi
 
-source setup/install_brew_cask.sh
+#source setup/install_brew_cask.sh
 source setup/run_config.sh
 
-echo "Preparing for projects"
+#echo "Preparing for projects"
 # mkdir ~/projects

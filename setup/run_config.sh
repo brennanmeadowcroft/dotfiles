@@ -10,9 +10,14 @@ rm ~/.bashrc && ln -s $(pwd)/active/bash/.bashrc ~/.bashrc
 echo -e "\e[31mImportant! Don't forget to add email to .gitconfig\e[0m"
 rm ~/.zshrc && ln -s $(pwd)/active/zsh/.zshrc ~/.zshrc
 
-if eval "apm"; then
-  echo "Setting up Atom"
-  apm install --silent --packages-file $(pwd)/active/atom/my-packages.txt
-else
-  echo "Atom Editor not set up.  Please install."
-fi
+echo "Setting up TMUX"
+rm ~/.tmux.conf && ln -s $(pwd)/active/tmux/.tmux.conf ~/.tmux.conf
+
+echo "Setting up vim"
+rm ~/.vimrc && ln -s $(pwd)/active/vim/.vimrc ~/.vimrc
+rm -rf ~/.vim && mkdir ~/.vim
+ln -s $(pwd)/active/vim/bundle/ ~/.vim/bundle
+ln -s $(pwd)/active/vim/autoload/ ~/.vim/autoload
+ln -s $(pwd)/active/vim/colors/ ~/.vim/colors
+
+echo -e "\e[31mImportant! Install powerline fonts inside dotfiles/../others/\e[0m"
