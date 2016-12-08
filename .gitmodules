@@ -1,9 +1,6 @@
 [submodule "active/vim/bundle/nerdtree"]
 	path = active/vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "active/other/fonts"]
-	path = active/other/fonts
-	url = git@github.com:powerline/fonts.git
 [submodule "active/vim/bundle/vim-colors-solarized"]
 	path = active/vim/bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
@@ -37,3 +34,6 @@
 [submodule "active/vim/bundle/hardmode"]
 	path = active/vim/bundle/hardmode
 	url = git@github.com:wikitopian/hardmode.git
+[submodule "active/other/fonts"]
+	path = active/other/fonts
+	url = git@github.com:powerline/fonts.git
