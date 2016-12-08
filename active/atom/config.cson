@@ -1,0 +1,31 @@
+"*":
+  core:
+    excludeVcsIgnoredPaths: false
+    telemetryConsent: "limited"
+  dash:
+    grammars:
+      JavaScript: [
+        "nodejs"
+        "javascript"
+        "angularjs"
+      ]
+  editor:
+    invisibles: {}
+    showIndentGuide: true
+    showInvisibles: true
+  "exception-reporting":
+    userId: "780c17a3-db11-cdce-fec8-628e731c3925"
+  "git-history": {}
+  "highlight-selected": {}
+  linter: {}
+  "linter-eslint": {}
+  "one-dark-ui": {}
+  "open-recent": {}
+  pigments:
+    mergeColorDuplicates: true
+    sortPaletteColors: "by color"
+  "standard-formatter":
+    formatOnSave: true
+  "tree-view": {}
+  welcome:
+    showOnStartup: false

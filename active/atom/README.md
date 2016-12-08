@@ -1,9 +1,16 @@
+Setup atom to use saved preferences
+```
+source link_atom.sh
+```
+
 Create a packages file for atom by running:
 ```
-apm list --installed --bare > /path/to/packages-file
+source backup_atom.sh
 ```
 
 Install a packages file by running:
 ```
-apm install --packages-file /path/to/packages-file
+source install_packages.sh
 ```
+
+
