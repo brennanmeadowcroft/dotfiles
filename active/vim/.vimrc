@@ -1,7 +1,7 @@
 "bUse pathogen autoloader
 execute pathogen#infect()
 
-let mapleader=",,"
+let mapleader=","
 
 set number                      "Show line numbers
 set linebreak                   "Break lines at word
@@ -33,6 +33,7 @@ set ttyfast
 set mouse=a                     "Use mouse in all modes
 set laststatus=2
 
+set pastetoggle=<Leader>v
 "set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 "set list
 
