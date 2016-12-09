@@ -100,3 +100,11 @@ if executable('ag')
   let g:ackprg = "ag --vimgrep"
 endif
 nnoremap <Leader>a :Ack!<space>
+
+"indentLine
+set conceallevel=1
+let g:indentLine_conceallevel=1
+let g:indentLine_color_term=187
+let g:indentLine='┆'
+:set list lcs=tab:——
+nnoremap <Leader>i :IndentLinesToggle<CR>
