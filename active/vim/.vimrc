@@ -1,4 +1,4 @@
-"bUse pathogen autoloader
+"Use pathogen autoloader
 execute pathogen#infect()
 
 let mapleader=","
@@ -94,3 +94,9 @@ let g:HardMode_level='hard'
 let g:HardMode_echo=1
 let g:HardMode_hardmodeMsg='Welcome to HELL!!!!'
 
+"Ack.vim/Silver Searcher
+"use ag as default
+if executable('ag')
+  let g:ackprg = "ag --vimgrep"
+endif
+nnoremap <Leader>a :Ack!<space>
