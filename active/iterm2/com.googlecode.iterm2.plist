@@ -222,7 +222,7 @@
 		</dict>
 	</dict>
 	<key>Default Bookmark Guid</key>
-	<string>D9D182B2-F675-4A4E-9124-3C7227F2F419</string>
+	<string>222369E1-24CC-472D-B040-AFB7081E00BF</string>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
@@ -257,11 +257,13 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>393 110 821 275 0 0 1280 777 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>269 207 606 456 0 0 1280 777 </string>
+	<string>269 161 599 502 0 0 1280 777 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 130 796 473 0 0 1280 777 </string>
+	<string>269 91 796 473 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 19 1277 758 0 0 1280 777 </string>
+	<string>0 25 1277 752 0 0 1280 777 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>152 50 570 452 0 0 1280 777 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1544,6 +1546,8 @@
 	<key>SULastCheckTime</key>
 	<date>2016-12-08T05:29:58Z</date>
 	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>Secure Input</key>
 	<false/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>

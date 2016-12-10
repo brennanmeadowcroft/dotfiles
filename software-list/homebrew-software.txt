@@ -5,3 +5,4 @@ watch
 zsh
 git
 tree
+the_silver_searcher
