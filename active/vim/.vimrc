@@ -33,14 +33,12 @@ set ttyfast
 set mouse=a                     "Use mouse in all modes
 set laststatus=2
 
-set pastetoggle=<Leader>v
-"set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
-"set list
+set pastetoggle=<Leader>v       "Go into paste mode (improves pasting from other sources)
 
-" Keep: more info in memory
 set hidden
 set history=100
 
+" File formatting (syntax & themes)
 filetype on
 syntax on
 set background=dark
@@ -52,11 +50,12 @@ map <leader>s :source ~/.vimrc<CR>
 autocmd BufWritePre * :%s/\s\+$//e
 "Cancel a search with <Esc>
 nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
-"<Leader><Leader> will re-open a previously opened file
-nnoremap <Leader><Leader> :e#<CR>
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" VIM Package settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Nerdtree
-"let NERDTreeMapActivateNode='<right>'
 let NERDTreeShowHidden=1
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>j :NERDTreeFind<CR>
@@ -83,6 +82,7 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_javascript_checkers=['standard']
+"Ignore certain types of files from linting
 let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
@@ -95,7 +95,7 @@ let g:HardMode_echo=1
 let g:HardMode_hardmodeMsg='Welcome to HELL!!!!'
 
 "Ack.vim/Silver Searcher
-"use ag as default
+"use ag as default. Some systems have ack (debian) so if ag isn't available, it will default rather than error
 if executable('ag')
   let g:ackprg = "ag --vimgrep"
 endif
