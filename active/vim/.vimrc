@@ -44,17 +44,20 @@ syntax on
 set background=dark
 colorscheme onedark
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Custom Commands
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "<Leader> + s --> sources .vimrc
 map <leader>s :source ~/.vimrc<CR>
 "Remove whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 "Cancel a search with <Esc>
 nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
+command Q qa                                " Use :Q to quit all windows
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM Package settings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Nerdtree
 let NERDTreeShowHidden=1
 nmap <leader>n :NERDTreeToggle<CR>
