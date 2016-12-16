@@ -254,14 +254,19 @@
 	<array/>
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
+	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<dict>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>393 110 821 275 0 0 1280 777 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>269 161 599 502 0 0 1280 777 </string>
+	<string>269 115 599 502 0 0 1280 777 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>269 91 796 473 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 25 1277 752 0 0 1280 777 </string>
+	<string>0 19 1263 758 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>152 50 570 452 0 0 1280 777 </string>
 	<key>New Bookmarks</key>
@@ -1500,6 +1505,10 @@
 	<integer>0</integer>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>502867624.56682801</real>
+	<key>OpenTmuxWindowsIn</key>
+	<integer>0</integer>
+	<key>PasteTabToStringTabStopSize</key>
+	<integer>2</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>

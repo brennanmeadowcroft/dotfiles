@@ -55,6 +55,11 @@ nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 "<Leader><Leader> will re-open a previously opened file
 nnoremap <Leader><Leader> :e#<CR>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Custom Commands
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+command Q qa                        " Use :Q to quit all windows
+
 "Nerdtree
 "let NERDTreeMapActivateNode='<right>'
 let NERDTreeShowHidden=1
