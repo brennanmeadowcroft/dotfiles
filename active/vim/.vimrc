@@ -21,7 +21,7 @@ set shiftwidth=2                "Number of auto-indent spaces
 set smartindent                 "Enable smart indent
 set smarttab                    "Enable smart tabs
 set softtabstop=2               "Number of spaces per tab
-
+set foldmethod=indent           "Fold code at indents
 set ruler                       "Show row and column ruler information
 
 set nocompatible                "removes junk characters when hitting arrow keys
@@ -34,9 +34,10 @@ set mouse=a                     "Use mouse in all modes
 set laststatus=2
 
 set pastetoggle=<Leader>v       "Go into paste mode (improves pasting from other sources)
-
+set clipboard=unnamed           "Allows yank to pbcopy (regular clipboard)
 set hidden
 set history=100
+
 
 " File formatting (syntax & themes)
 filetype on
@@ -53,7 +54,7 @@ map <leader>s :source ~/.vimrc<CR>
 autocmd BufWritePre * :%s/\s\+$//e
 "Cancel a search with <Esc>
 nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
-command Q qa                                " Use :Q to quit all windows
+command Q qa                                "Use :Q to quit all windows
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM Package settings
