@@ -56,6 +56,10 @@ autocmd BufWritePre * :%s/\s\+$//e
 nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 command Q qa                                "Use :Q to quit all windows
 
+"Navigate buffers similar to tabs in other programs but with vim navigation keys
+nnoremap <C-L>          :bp<CR>
+nnoremap <C-H>          :bn<CR>
+nnoremap <C-C>          :bd<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM Package settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -112,3 +116,11 @@ let g:indentLine_color_term=187
 let g:indentLine='┆'
 :set list lcs=tab:——
 nnoremap <Leader>i :IndentLinesToggle<CR>
+
+"devicons
+let g:webdevicons_enable=1
+let g:webdevicons_enable_nerdtree = 1
+let g:webdevicons_enable_airline_statusline = 1
+set encoding=utf8
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
+
