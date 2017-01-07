@@ -82,7 +82,7 @@ let g:ctrlp_by_filename=0
 "vim-airline
 "Add tab line
 let g:airline#extensions#tabline#enabled=1
-let g:airline_theme='murmur'
+let g:airline_theme='base16'
 let g:airline_powerline_fonts=1
 
 "Syntastic
