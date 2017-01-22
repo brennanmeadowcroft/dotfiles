@@ -52,3 +52,9 @@
 [submodule "active/vim/bundle/vim-devicons"]
 	path = active/vim/bundle/vim-devicons
 	url = git@github.com:ryanoasis/vim-devicons.git
+[submodule "active/vim/bundle/vim-buffergator"]
+	path = active/vim/bundle/vim-buffergator
+	url = git@github.com:jeetsukumaran/vim-buffergator.git
+[submodule "active/vim/bundle/supertab"]
+	path = active/vim/bundle/supertab
+	url = git@github.com:ervandew/supertab.git

@@ -1,12 +1,19 @@
 # Dotfiles
 This contains all the configuration necessary to get a new development machine up and running.
 
+## Cheatsheets
+Keyboard shortcuts and cheatsheets for these dotfiles are available on Cheatography
+
+* Vim: [https://www.cheatography.com/brennanmeadowcroft/cheat-sheets/personal-vim/](https://www.cheatography.com/brennanmeadowcroft/cheat-sheets/personal-vim/)
+* TMUX/Bash: [https://www.cheatography.com/brennanmeadowcroft/cheat-sheets/personal-bash-tmux/](https://www.cheatography.com/brennanmeadowcroft/cheat-sheets/personal-bash-tmux/)
+
 ## Running Setup
 1. Clone this repository to the home directory (`~`)
 2. Run the setup script to copy the configuration files
 ```
 source ./setup/install_base.sh
 ```
+
 ## Additional Software
 Some software is unable to be installed via a script.  At time of writing, this included XCode, Airmail and personal versions of MS Office.  These will need to be installed either through a downloaded installer or the App Store.
 
