@@ -68,8 +68,6 @@ nnoremap <C-C>          :bd<CR>
 let NERDTreeShowHidden=1
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>j :NERDTreeFind<CR>
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
 let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
 
 " vim-javascript
@@ -130,3 +128,6 @@ set guifont=Roboto\ Mono\ Thin\ Nerd\ Font\ Complete:h11
 let g:buffergator_viewport_split_policy = 'R'
 nmap <leader>b :BuffergatorToggle<CR>
 let g:buffergator_suppress_keymaps = 1
+
+"Fugitive.vim
+set diffopt+=vertical
