@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
 	name = Brennan Meadowcroft
-	email = brennanmeadowcroft@gmail.com
+	email = name@abc.com
 [core]
 	excludesfile = ~/.gitignore_global
 [merge]
