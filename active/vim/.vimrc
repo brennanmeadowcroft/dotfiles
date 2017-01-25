@@ -121,7 +121,6 @@ let g:webdevicons_enable=1
 let g:webdevicons_enable_nerdtree = 1
 let g:webdevicons_enable_airline_statusline = 1
 set encoding=utf8
-"set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 set guifont=Roboto\ Mono\ Thin\ Nerd\ Font\ Complete:h11
 
 "buffergator
@@ -131,3 +130,4 @@ let g:buffergator_suppress_keymaps = 1
 
 "Fugitive.vim
 set diffopt+=vertical
+nnoremap <Leader>gs :Gstatus<CR>
