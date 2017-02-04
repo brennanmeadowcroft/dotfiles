@@ -68,8 +68,6 @@ nnoremap <C-C>          :bd<CR>
 let NERDTreeShowHidden=1
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>j :NERDTreeFind<CR>
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
 let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
 
 " NerdComment

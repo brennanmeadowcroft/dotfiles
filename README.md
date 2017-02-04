@@ -4,14 +4,15 @@ This contains all the configuration necessary to get a new development machine u
 ## Cheatsheets
 Keyboard shortcuts and cheatsheets for these dotfiles are available on Cheatography
 
-* Vim: [https://www.cheatography.com/brennanmeadowcroft/cheat-sheets/personal-vim/](https://www.cheatography.com/brennanmeadowcroft/cheat-sheets/personal-vim/)
-* TMUX/Bash: [https://www.cheatography.com/brennanmeadowcroft/cheat-sheets/personal-bash-tmux/](https://www.cheatography.com/brennanmeadowcroft/cheat-sheets/personal-bash-tmux/)
+* Vim: [https://s3.amazonaws.com/bmeadowcroft/cheatsheets/vim-cheatsheet.pdf](https://s3.amazonaws.com/bmeadowcroft/cheatsheets/vim-cheatsheet.pdf)
+* TMUX/Bash: [https://s3.amazonaws.com/bmeadowcroft/cheatsheets/bash-cheatsheet.pdf](https://s3.amazonaws.com/bmeadowcroft/cheatsheets/bash-cheatsheet.pdf)
 
 ## Running Setup
 1. Clone this repository to the home directory (`~`)
-2. Run the setup script to copy the configuration files
+2. Download the submodules
 ```
-source ./setup/install_base.sh
+git submodule init
+git submodule update
 ```
 
 ## Additional Software
