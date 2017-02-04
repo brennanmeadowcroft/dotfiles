@@ -72,6 +72,9 @@ autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
 
+" NerdComment
+filetype plugin on
+
 " vim-javascript
 let g:javascript_plugin_jsdoc=1
 
@@ -126,7 +129,17 @@ set encoding=utf8
 "set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 set guifont=Roboto\ Mono\ Thin\ Nerd\ Font\ Complete:h11
 
-"buffergator
+"Buffergator
 let g:buffergator_viewport_split_policy = 'R'
 nmap <leader>b :BuffergatorToggle<CR>
 let g:buffergator_suppress_keymaps = 1
+
+"Fugitive.vim
+set diffopt+=vertical
+
+"vim.gitgutter
+let g:gitgutter_sign_modified="\uf101" " basically: >>
+let g:gitgutter_sign_added="\uf44d" "basically: +
+let g:gitgutter_sign_removed="\uf48b" "basically: -
+let g:gitgutter_sign_removed_first_line="\uf42d" "a collapsing fold
+
