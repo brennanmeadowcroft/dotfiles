@@ -141,3 +141,5 @@ let g:gitgutter_sign_added="\uf44d" "basically: +
 let g:gitgutter_sign_removed="\uf48b" "basically: -
 let g:gitgutter_sign_removed_first_line="\uf42d" "a collapsing fold
 
+" Colorizer
+let g:colorizer_auto_filetype='scss,less,css,html'
