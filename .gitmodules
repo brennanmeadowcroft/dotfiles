@@ -61,3 +61,6 @@
 [submodule "active/vim/bundle/Colorizer"]
 	path = active/vim/bundle/Colorizer
 	url = git@github.com:chrisbra/Colorizer.git
+[submodule "active/vim/bundle/dbext.vim"]
+	path = active/vim/bundle/dbext.vim
+	url = git@github.com:vim-scripts/dbext.vim.git
