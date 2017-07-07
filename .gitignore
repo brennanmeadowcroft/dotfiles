@@ -1,1 +1,2 @@
 .env
+**/dbext-connections.vim
