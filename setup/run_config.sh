@@ -13,6 +13,9 @@ rm ~/.zshrc && ln -s $(pwd)/active/zsh/.zshrc ~/.zshrc
 echo "Setting up TMUX"
 rm ~/.tmux.conf && ln -s $(pwd)/active/tmux/.tmux.conf ~/.tmux.conf
 
+echo "Setting up Zsh"
+rm ~/.zshrc && ln -s $(pwd)/active/zsh/.zshrc ~/.zshrc
+
 echo "Setting up vim"
 rm ~/.vimrc && ln -s $(pwd)/active/vim/.vimrc ~/.vimrc
 rm -rf ~/.vim && mkdir ~/.vim
@@ -21,3 +24,6 @@ ln -s $(pwd)/active/vim/autoload/ ~/.vim/autoload
 ln -s $(pwd)/active/vim/colors/ ~/.vim/colors
 
 echo -e "\e[31mImportant! Install powerline fonts inside dotfiles/../others/\e[0m"
+echo "run ./active/other/powerline-fonts/install.sh"
+
+echo "Don't forget to restart the terminal for changes to take effect!"

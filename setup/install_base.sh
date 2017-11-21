@@ -3,6 +3,9 @@ echo $pwd
 echo "Initializing submodules"
 git submodule init && git submodule update
 
+echo "Installing Oh My Zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 if eval "brew -v"; then
   echo "Homebrew detected"
   brew update

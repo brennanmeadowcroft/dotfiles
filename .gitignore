@@ -1,2 +1,4 @@
 .env
 **/dbext-connections.vim
+*.swp
+*.swo
