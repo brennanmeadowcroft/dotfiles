@@ -80,6 +80,7 @@ let g:javascript_plugin_jsdoc=1
 let g:ctrlp_map='<c-p>'
 let g:ctrlp_cmd='CtrlP'
 let g:ctrlp_by_filename=0
+let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --exclude-standard -co']
 
 "vim-airline
 "Add tab line
@@ -141,3 +142,9 @@ let g:gitgutter_sign_added="\uf44d" "basically: +
 let g:gitgutter_sign_removed="\uf48b" "basically: -
 let g:gitgutter_sign_removed_first_line="\uf42d" "a collapsing fold
 
+" dbext.vim
+" Source all files in ~/dbext-connections to pull in local db connections
+for rcfile in split(globpath("~/.dbext-connections/", "*.vim"), '\n')
+    execute('source '.rcfile)
+endfor
+let g:dbext_default_PGSQL_pgpass=expand('$HOME/.dbext-connections/.pgpass')

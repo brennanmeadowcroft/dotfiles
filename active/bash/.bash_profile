@@ -3,11 +3,13 @@ export NVM_DIR="/Users/$USER/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 [[ -s /home/$USER/.nvm/nvm.sh ]] && . /home/$USER/.nvm/nvm.sh
 
+# Source work based bash profile - see README
+[[ -s /Users/$USER/.bash_profile-work ]] && . /Users/$USER/.bash_profile-work
+
 # Aliases
 alias ls="gls -lthAGF --color --group-directories-first"
 alias tree="tree -FCpuh -L 2 --dirsfirst"
-alias dm="docker-machine"
-alias dc="docker-compose"
+alias ps="ps u -c"
 
 alias docker-clear-all="docker rm $(docker ps -a -q)"
 alias docker-clean-all="docker rmi -f $(docker images -a -q)"
@@ -28,7 +30,13 @@ export PATH="/Users/A777967/anaconda/bin:$PATH"
 # added by Anaconda3 4.2.0 installer
 export PATH="/Users/A777967/anaconda/bin:$PATH"
 
-export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+function monitor-process {
+  if [ $# -eq 1 ]; then
+    watch "ps u -c | grep $1"
+  else
+    watch "ps u -c"
+  fi
+}
 
 # Start tmux
 tmux

@@ -39,3 +39,8 @@ Thumbs.db
 # VIM #
 ######
 *.swp
+
+# Databases #
+# ###########
+.pgpass
+
