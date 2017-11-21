@@ -49,6 +49,7 @@
 [submodule "active/other/nerd-fonts"]
 	path = active/other/nerd-fonts
 	url = git@github.com:ryanoasis/nerd-fonts.git
+        ignore = dirty
 [submodule "active/vim/bundle/vim-devicons"]
 	path = active/vim/bundle/vim-devicons
 	url = git@github.com:ryanoasis/vim-devicons.git
@@ -61,3 +62,4 @@
 [submodule "active/vim/bundle/dbext.vim"]
 	path = active/vim/bundle/dbext.vim
 	url = git@github.com:vim-scripts/dbext.vim.git
+        ignore = dirty
