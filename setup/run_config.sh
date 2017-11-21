@@ -1,7 +1,7 @@
 #! /bin/bash
 
 echo "Setting global .gitignore"
-rm ~/.gitignore_global && n -s .git/.gitignore_global ~/.gitignore_global
+rm ~/.gitignore_global && ln -s $(pwd)/active/git/.gitignore_global ~/.gitignore_global
 
 echo "Adding dotfiles"
 rm ~/.bash_profile && ln -s $(pwd)/active/bash/.bash_profile ~/.bash_profile

@@ -93,3 +93,10 @@ source ~/.bash_profile
 source ~/.bashrc
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/brennan/.nvm/versions/node/v6.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/brennan/.nvm/versions/node/v6.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/brennan/.nvm/versions/node/v6.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/brennan/.nvm/versions/node/v6.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh

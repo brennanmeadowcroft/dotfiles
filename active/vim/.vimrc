@@ -70,6 +70,9 @@ nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>j :NERDTreeFind<CR>
 let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
 
+" NerdComment
+filetype plugin on
+
 " vim-javascript
 let g:javascript_plugin_jsdoc=1
 
@@ -123,7 +126,7 @@ let g:webdevicons_enable_airline_statusline = 1
 set encoding=utf8
 set guifont=Roboto\ Mono\ Thin\ Nerd\ Font\ Complete:h11
 
-"buffergator
+"Buffergator
 let g:buffergator_viewport_split_policy = 'R'
 nmap <leader>b :BuffergatorToggle<CR>
 let g:buffergator_suppress_keymaps = 1
@@ -131,3 +134,10 @@ let g:buffergator_suppress_keymaps = 1
 "Fugitive.vim
 set diffopt+=vertical
 nnoremap <Leader>gs :Gstatus<CR>
+
+"vim.gitgutter
+let g:gitgutter_sign_modified="\uf101" " basically: >>
+let g:gitgutter_sign_added="\uf44d" "basically: +
+let g:gitgutter_sign_removed="\uf48b" "basically: -
+let g:gitgutter_sign_removed_first_line="\uf42d" "a collapsing fold
+

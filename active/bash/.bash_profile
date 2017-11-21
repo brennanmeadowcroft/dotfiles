@@ -28,5 +28,7 @@ export PATH="/Users/A777967/anaconda/bin:$PATH"
 # added by Anaconda3 4.2.0 installer
 export PATH="/Users/A777967/anaconda/bin:$PATH"
 
+export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+
 # Start tmux
 tmux
