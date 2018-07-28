@@ -125,7 +125,7 @@ let g:webdevicons_enable=1
 let g:webdevicons_enable_nerdtree = 1
 let g:webdevicons_enable_airline_statusline = 1
 set encoding=utf8
-set guifont=Roboto\ Mono\ Thin\ Nerd\ Font\ Complete:h11
+set guifont=RobotoMono_Nerd_Font:h11
 
 "Buffergator
 let g:buffergator_viewport_split_policy = 'R'

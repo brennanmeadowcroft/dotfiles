@@ -10,6 +10,7 @@ export NVM_DIR="/Users/$USER/.nvm"
 alias ls="gls -lthAGF --color --group-directories-first"
 alias tree="tree -FCpuh -L 2 --dirsfirst"
 alias ps="ps u -c"
+alias graph="git log --oneline --decorate --all --graph"
 
 alias docker-clear-all="docker rm $(docker ps -a -q)"
 alias docker-clean-all="docker rmi -f $(docker images -a -q)"
