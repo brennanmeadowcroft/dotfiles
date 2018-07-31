@@ -48,6 +48,11 @@ ln -s $(pwd)/active/vim/autoload/ ~/.vim/autoload
 ln -s $(pwd)/active/vim/colors/ ~/.vim/colors
 printf "Done.\n"
 
+printf "Setting up ${GREEN_BOLD}NeoVim${NORMAL}..."
+rm ~/.config/nvim/init.vim 2> /dev/null
+ln -s $(pwd)/active/neovim/init.vim ~/.config/nvim/init.vim
+printf "Done.\n"
+
 printf "${IMPORTANT}Important! ${NORMAL}Install powerline fonts inside dotfiles/../others/\n"
 printf "run ${CODE}./active/other/powerline-fonts/install.sh${NORMAL}\n"
 

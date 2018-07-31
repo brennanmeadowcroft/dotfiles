@@ -54,6 +54,11 @@ fi
 #cat $(pwd)/software-list/npm-global-software.txt | xargs npm install -g
 #cat $(pwd)/software-list/brew-cask-software.txt | xargs brew cask install
 
+printf "Installing ${NOTICE}NeoVim${NORMAL}..."
+brew install neovim 2> /dev/null
+mkdir -p ~/.config/nvim
+printf "Done.\n"
+
 printf "Installing ${NOTICE}OSX Xcode Command Line Tools${NORMAL}..."
 if eval "xcode-select -v"; then
   printf "${IMPORTANT}Already Installed.${NORMAL}\n"
