@@ -1,35 +1,51 @@
 #! /bin/bash
-echo $pwd
-echo "Initializing submodules"
+
+RED="31"
+GREEN="32"
+BOLD="1"
+IMPORTANT="\e[${BOLD};${RED}m"
+NOTICE="\e[${BOLD};${GREEN}m"
+NORMAL="\e[0m"
+
+printf "Initializing submodules\n"
 git submodule init && git submodule update
+printf "Done.\n"
 
-echo "Installing Oh My Zsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+printf "Installing ${NOTICE}Oh My Zsh${NORMAL}..."
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussel/oh-my-zsh/master/tools/install.sh)" 2> /dev/null
+printf "Done.\n"
 
+printf "Installing ${NOTICE}Homebrew${NORMAL}..."
 if eval "brew -v"; then
-  echo "Homebrew detected"
-  brew update
+  printf "Homebrew ${IMPORTANT}detected${NORMAL}.  No install necessary... updating..."
+  brew update 2> /dev/null
 else
-  echo "Homebrew not detected... installing now"
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  printf "Homebrew ${IMPORTANT}NOT detected${NORMAL}... installing now..."
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" 2> /dev/null
 fi
+printf "Done.\n"
 
-echo "Bootstrapping computer setup.  This could take a while..."
-echo "Installing basic components"
+printf "Bootstrapping computer setup.  This could take a while...\n"
+printf "Installing basic components \n"
 # Install RVM
+printf "Installing ${NOTICE}RVM${NORMAL}..."
 if eval "rvm -v"; then
-  echo "RVM installed"
+  echo "${IMPORTANT}Already Installed.${NORMAL}\n"
 else
-  curl -sSL https://get.rvm.io | bash -s stable --ruby
+  curl -sSL https://get.rvm.io | bash -s stable --ruby 2> /dev/null
+  printf "Done.\n"
 fi
 
 # Install NVM and node
+printf "Installing ${NOTICE}NVM${NORMAL}..."
 if eval "nvm --version"; then
-  echo "NVM installed"
+  echo "${IMPORTANT}Already Installed.${NORMAL}\n"
 else
-  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
-  nvm install stable
-  nvm alias default stable
+  mkdir -p $NVM_DIR 2> /dev/null
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash 2> /dev/null
+  nvm install stable 2> /dev/null
+  nvm alias default stable 2> /dev/null
+  printf "Done.\n"
 fi
 
 ## Install base software
@@ -38,16 +54,16 @@ fi
 #cat $(pwd)/software-list/npm-global-software.txt | xargs npm install -g
 #cat $(pwd)/software-list/brew-cask-software.txt | xargs brew cask install
 
-echo "Installing OSX Xcode Command Line Tools"
+printf "Installing ${NOTICE}OSX Xcode Command Line Tools${NORMAL}..."
 if eval "xcode-select -v"; then
-  echo "Xcode tools already installed"
+  printf "${IMPORTANT}Already Installed.${NORMAL}\n"
 else
-  echo "Xcode Tools not detected... installing now"
-  xcode-select --install
+  xcode-select --install 2> /dev/null
+  printf "Done.\n"
 fi
 
-##source setup/install_brew_cask.sh
-#source setup/run_config.sh
+source setup/run_config.sh
 
-##echo "Preparing for projects"
-## mkdir ~/projects
+printf "Creating projects folder..."
+mkdir -p ~/projects 2> /dev/null
+printf "Done.\n"

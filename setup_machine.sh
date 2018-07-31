@@ -1,4 +1,4 @@
 #! /bin/bash
 
-#./install_base.sh
-./run_config.sh
+./setup/install_base.sh
+./setup/run_config.sh

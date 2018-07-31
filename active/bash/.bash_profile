@@ -41,3 +41,4 @@ function monitor-process {
 
 # Start tmux
 tmux
+tmux source-file ~/.tmux.conf

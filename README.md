@@ -9,12 +9,14 @@ Keyboard shortcuts and cheatsheets for these dotfiles are available on Cheatogra
 
 ## Running Setup
 1. Clone this repository to the home directory (`~`)
-2. Download the submodules
+2. Make the setup script executable for your user
 ```
-git submodule init
-git submodule update
+chmod 755 setup_machine.sh
 ```
-3. If not already completed, run `/setup/create_db_connections.sh` to create the sample dbext.vim config files.
+3. Run the setup machine script... this should take care of installing most of the necessary software and linking all the dotfiles appropriately.
+```
+./setup_machine.sh
+```
 
 ## Additional Software
 Some software is unable to be installed via a script.  At time of writing, this included XCode, Airmail and personal versions of MS Office.  These will need to be installed either through a downloaded installer or the App Store.
