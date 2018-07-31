@@ -31,7 +31,6 @@ set undolevels=1000             "Number of undo levels
 set backspace=indent,eol,start  "Backspace behavior
 
 set ttyfast
-set mouse=a                     "Use mouse in all modes
 set laststatus=2
 
 set pastetoggle=<Leader>v       "Go into paste mode (improves pasting from other sources)
@@ -43,8 +42,10 @@ set history=100
 " File formatting (syntax & themes)
 filetype on
 syntax on
+set termguicolors               "Full 24bit colors
 set background=dark
-colorscheme onedark
+colorscheme wwdc16
+let g:wwdc16_use16=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Custom Commands
