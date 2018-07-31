@@ -44,8 +44,9 @@ filetype on
 syntax on
 set termguicolors               "Full 24bit colors
 set background=dark
-colorscheme wwdc16
-let g:wwdc16_use16=1
+colorscheme vim-material
+let g:material_style='palenight'
+let g:airline_theme='material'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Custom Commands
