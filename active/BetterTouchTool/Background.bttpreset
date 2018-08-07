@@ -104,6 +104,7 @@
     "BTTForceNormalHapticResponse" : 12,
     "showSiriRemoteTab" : true,
     "BTTForceNormalClickPressure2F" : 140,
+    "SHOWEDHIDEMENUBARWARNING" : true,
     "cornerSnap" : true,
     "BTTTouchBarSupportEnabled" : true,
     "showDrawingsTab" : true,
@@ -111,7 +112,7 @@
     "BSTCornerRoundness" : 40,
     "BTTDismissIfNothingToShow" : true,
     "BSTPreventTopMissionControl" : true,
-    "BTTNumberOfStarts" : 45,
+    "BTTNumberOfStarts" : 49,
     "BTTHTTPServerEncrypted" : false,
     "showKeyboardTab" : true,
     "BTTConvertedDevices" : true,
@@ -129,39 +130,31 @@
     "BTTTouchBarUseMonoSpacedFont" : true,
     "nextMonitorMoveWarningShowed" : true
   },
-  "BTTPresetUUID" : "5C64E5D2-4792-41CC-AD89-164469DDDCCA",
+  "BTTPresetUUID" : "66F706D3-6589-491A-98BB-33C1478FF261",
   "BTTPresetContent" : [
     {
       "BTTAppBundleIdentifier" : "BT.G",
       "BTTAppName" : "Global",
+      "BTTAppSpecificSettings" : {
+
+      },
       "BTTTriggers" : [
         {
+          "BTTTriggerType" : -1,
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 47,
-          "BTTPredefinedActionName" : "Move Window to Next Monitor",
-          "BTTAdditionalConfiguration" : "9830411",
-          "BTTEnabled2" : 1,
-          "BTTUUID" : "8144B7AB-E1B3-4360-9A41-07A605E47A5F",
-          "BTTTriggerOnDown" : 1,
-          "BTTEnabled" : 1,
-          "BTTShortcutKeyCode" : 124,
-          "BTTShortcutModifierKeys" : 9830400,
-          "BTTOrder" : 4
-        },
-        {
-          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 21,
-          "BTTPredefinedActionName" : "Maximize Window",
+          "BTTPredefinedActionType" : 19,
+          "BTTPredefinedActionName" : "Maximize Window Left",
           "BTTAdditionalConfiguration" : "9699337",
           "BTTEnabled2" : 1,
-          "BTTUUID" : "A2A8430D-E730-494E-A115-D0D7273009E2",
+          "BTTUUID" : "514D8280-A939-4854-BB91-40353085D180",
           "BTTTriggerOnDown" : 1,
           "BTTEnabled" : 1,
-          "BTTShortcutKeyCode" : 126,
+          "BTTShortcutKeyCode" : 123,
           "BTTShortcutModifierKeys" : 9699328,
-          "BTTOrder" : 2
+          "BTTOrder" : 1
         },
         {
+          "BTTTriggerType" : -1,
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
           "BTTPredefinedActionType" : 20,
           "BTTPredefinedActionName" : "Maximize Window Right",
@@ -175,6 +168,7 @@
           "BTTOrder" : 0
         },
         {
+          "BTTTriggerType" : -1,
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
           "BTTPredefinedActionType" : 84,
           "BTTPredefinedActionName" : "Restore Old Window Size",
@@ -189,22 +183,39 @@
         },
         {
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 19,
-          "BTTPredefinedActionName" : "Maximize Window Left",
-          "BTTAdditionalConfiguration" : "9699337",
+          "BTTPredefinedActionType" : 47,
+          "BTTPredefinedActionName" : "Move Window to Next Monitor",
+          "BTTAdditionalConfiguration" : "9830400",
           "BTTEnabled2" : 1,
-          "BTTUUID" : "514D8280-A939-4854-BB91-40353085D180",
+          "BTTUUID" : "8144B7AB-E1B3-4360-9A41-07A605E47A5F",
           "BTTTriggerOnDown" : 1,
           "BTTEnabled" : 1,
-          "BTTShortcutKeyCode" : 123,
+          "BTTShortcutKeyCode" : 124,
+          "BTTShortcutModifierKeys" : 9830400,
+          "BTTOrder" : 4
+        },
+        {
+          "BTTTriggerType" : -1,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 21,
+          "BTTPredefinedActionName" : "Maximize Window",
+          "BTTAdditionalConfiguration" : "9699337",
+          "BTTEnabled2" : 1,
+          "BTTUUID" : "A2A8430D-E730-494E-A115-D0D7273009E2",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 126,
           "BTTShortcutModifierKeys" : 9699328,
-          "BTTOrder" : 1
+          "BTTOrder" : 2
         }
       ]
     },
     {
       "BTTAppBundleIdentifier" : "com.apple.finder",
       "BTTAppName" : "Finder",
+      "BTTAppSpecificSettings" : {
+        "BTTTouchBarMode" : 2
+      },
       "BTTTriggers" : [
 
       ]
