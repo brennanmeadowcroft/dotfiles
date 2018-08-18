@@ -203,3 +203,7 @@ call s:hi("xmlTag",     s:gui.cyan,   "", "", "", "")
 call s:hi("xmlEndTag",  s:gui.cyan,   "", "", "", "")
 call s:hi("xmlTagName", s:gui.red,    "", "", "", "")
 call s:hi("xmlAttrib",  s:gui.yellow, "", "", "", "")
+
+call s:hi("ALEErrorLine",   "", s:gui.red,    "", "", "")
+call s:hi("ALEWarningLine", "", s:gui.orange, "", "", "")
+call s:hi("ALEInfoLine",    "", s:gui.yellow, "", "", "")

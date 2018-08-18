@@ -92,15 +92,13 @@ let g:airline_powerline_fonts=1
 
 "Syntastic
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:syntastic_javascript_checkers=['standard']
 "Ignore certain types of files from linting
-let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_check_on_open=1
-let g:syntastic_check_on_wq=0
+let g:ale_enabled=1
+let g:ale_echo_msg_error_str='Err'
+let g:ale_echo_msg_warning_str='Warn'
+let g:ale_echo_msg_format='[%linter%] %s [%severity%]'
+let g:ale_set_highlights=1
 
 " Hardmode!!!!!!
 let g:HardMode_level='hard'

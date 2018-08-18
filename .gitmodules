@@ -66,3 +66,6 @@
 [submodule "active/vim/bundle/vim-startify"]
 	path = active/vim/bundle/vim-startify
 	url = https://github.com/mhinz/vim-startify.git
+[submodule "active/vim/bundle/vim-cfn"]
+	path = active/vim/bundle/vim-cfn
+	url = https://github.com/speshak/vim-cfn.git
