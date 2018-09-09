@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string></string>
+	<key>connections</key>
+	<dict>
+		<key>CFE11A31-10AD-4634-A530-491A6C6E2FD4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>ED9B37B0-8047-4A98-A17F-755C297B7520</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>ED9B37B0-8047-4A98-A17F-755C297B7520</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C5ED3291-0F9F-4C2D-835E-A92F6E7C3579</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string></string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Toggle Bluetooth</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>#!/usr/bin/env python
+# author seapy (http://seapy.com)
+# base from "http://web.mac.com/nissplus/IslandOfApples/Enable%20Disable%20Mac%20OSX%20Bluetooth%20from%20Python.html"
+import objc
+bundle = objc.loadBundle("IOBluetooth", globals(),bundle_path=objc.pathForFramework(u'/System/Library/Frameworks/IOBluetooth.framework'))
+if not bundle:
+  raise RuntimeError, "initFrameworkWrapper"
+# request handles to functions
+fs = [('IOBluetoothPreferenceGetControllerPowerState', 'oI'),('IOBluetoothPreferenceSetControllerPowerState','vI')]
+ds = {}
+objc.loadBundleFunctions(bundle,ds,fs)
+# did we get everything we need?
+for (name, handle) in fs:
+  if not name in ds:
+    raise RuntimeError, "failed to load: " + name
+if ds['IOBluetoothPreferenceGetControllerPowerState']() == 1:
+  ds['IOBluetoothPreferenceSetControllerPowerState'](0)
+  print ("OFF")
+else:
+  ds['IOBluetoothPreferenceSetControllerPowerState'](1)
+  print ("ON")
+exit</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>ED9B37B0-8047-4A98-A17F-755C297B7520</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Radio is now {query}</string>
+				<key>title</key>
+				<string>Bluetooth</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>C5ED3291-0F9F-4C2D-835E-A92F6E7C3579</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>bt</string>
+				<key>subtext</key>
+				<string>Toggles power to the Bluetooth Radio</string>
+				<key>text</key>
+				<string>Toggle BlueTooth</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>CFE11A31-10AD-4634-A530-491A6C6E2FD4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>C5ED3291-0F9F-4C2D-835E-A92F6E7C3579</key>
+		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>CFE11A31-10AD-4634-A530-491A6C6E2FD4</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>ED9B37B0-8047-4A98-A17F-755C297B7520</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
