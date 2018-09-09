@@ -69,3 +69,6 @@
 [submodule "active/vim/bundle/vim-cfn"]
 	path = active/vim/bundle/vim-cfn
 	url = https://github.com/speshak/vim-cfn.git
+[submodule "active/vim/bundle/onedark.vim"]
+	path = active/vim/bundle/onedark.vim
+	url = https://github.com/joshdick/onedark.vim.git

@@ -407,6 +407,11 @@ call s:h("NeomakeInfoSign", { "fg": s:blue })
 call s:h("diffAdded", { "fg": s:green })
 call s:h("diffRemoved", { "fg": s:red })
 
+" w0rp/ale
+call s:h("ALEInfo", { "bg": s:blue })
+call s:h("ALEWarning", { "bg": s:yellow })
+call s:h("ALEError", { "bg": s:red })
+
 " +------------------+
 " | Git Highlighting |
 " +------------------+
@@ -455,3 +460,4 @@ if has("nvim")
   let g:terminal_color_background = g:terminal_color_0
   let g:terminal_color_foreground = g:terminal_color_7
 endif
+
