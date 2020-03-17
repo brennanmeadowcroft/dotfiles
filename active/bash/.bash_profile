@@ -25,11 +25,8 @@ export ANDROID_HOME=/usr/local/opt/android-sdk
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-# added by Anaconda3 4.2.0 installer
-export PATH="/Users/A777967/anaconda/bin:$PATH"
-
-# added by Anaconda3 4.2.0 installer
-export PATH="/Users/A777967/anaconda/bin:$PATH"
+# Add Visual Studio Code (code)
+export PATH="$PATH:/Applications/Visual Studio Code.app/COntents/Resources/app/bin"
 
 function monitor-process {
   if [ $# -eq 1 ]; then

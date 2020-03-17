@@ -1,5 +1,6 @@
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+PYTHON_USER_BASE_PATH=$(python -m site --user-base)
+export PATH="$PATH:$HOME/.rvm/bin:$PYTHON_USER_BASE_PATH/bin" # Add RVM to PATH for scripting
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
