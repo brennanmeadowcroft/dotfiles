@@ -2,9 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>currentthemeuid</key>
-	<string>95BDCEB1-6F4C-45A3-AA28-82F2DD16AF5A</string>
-	<key>lightthemeuid</key>
-	<string>theme.custom.2B00955F-5FA4-4B5C-8B07-3AE30D3BE10B</string>
+	<key>autoExpandSnippetPlaySound</key>
+	<false/>
+	<key>autoExpandSnippetTriggerPlaySound</key>
+	<false/>
 </dict>
 </plist>
