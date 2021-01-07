@@ -48,13 +48,8 @@ else
   printf "Done.\n"
 fi
 
-## Install base software
-#cat $(pwd)/software-list/homebrew-software.txt | xargs brew install
-#cat $(pwd)/software-list/gems-software.txt | xargs gem install
-#cat $(pwd)/software-list/npm-global-software.txt | xargs npm install -g
-#cat $(pwd)/software-list/brew-cask-software.txt | xargs brew cask install
-
 printf "Installing ${NOTICE}NeoVim${NORMAL}..."
+# This is not installed via the homebrew list because it requries the additional configuration step
 brew install neovim 2> /dev/null
 mkdir -p ~/.config/nvim
 printf "Done.\n"

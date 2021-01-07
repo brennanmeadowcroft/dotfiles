@@ -4,6 +4,8 @@
 <dict>
 	<key>currentthemeuid</key>
 	<string>95BDCEB1-6F4C-45A3-AA28-82F2DD16AF5A</string>
+	<key>darkthemeuid</key>
+	<string>95BDCEB1-6F4C-45A3-AA28-82F2DD16AF5A</string>
 	<key>lightthemeuid</key>
 	<string>theme.custom.2B00955F-5FA4-4B5C-8B07-3AE30D3BE10B</string>
 </dict>

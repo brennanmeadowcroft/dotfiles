@@ -15,8 +15,13 @@ chmod 755 setup_machine.sh
 ```
 3. Run the setup machine script... this should take care of installing most of the necessary software and linking all the dotfiles appropriately.
 ```
-./setup_machine.sh
+PROFILE={work|personal} ./setup_machine.sh
 ```
+
+### Brand new, personal computers
+If the computer is a personal one and is being set up for the very first time, install the admin applications in a admin account as the first order of business.
+
+Follow the steps above but replace step 3 with: `./setup/setup_admin.sh`.  No profile is necessary when running this command.
 
 ## Additional Software
 Some software is unable to be installed via a script.  At time of writing, this included XCode, Airmail and personal versions of MS Office.  These will need to be installed either through a downloaded installer or the App Store.

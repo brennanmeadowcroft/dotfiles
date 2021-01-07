@@ -1,4 +1,3 @@
-caskroom/cask/brew-cask
 coreutils
 vim
 watch
@@ -6,3 +5,5 @@ zsh
 git
 tree
 the_silver_searcher
+neovim
+jq
