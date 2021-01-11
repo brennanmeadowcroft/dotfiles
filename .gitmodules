@@ -72,3 +72,6 @@
 [submodule "active/vim/bundle/onedark.vim"]
 	path = active/vim/bundle/onedark.vim
 	url = https://github.com/joshdick/onedark.vim.git
+[submodule "active/vim/bundle/ale.vim"]
+	path = active/vim/bundle/ale
+	url = https://github.com/w0rp/ale.git
