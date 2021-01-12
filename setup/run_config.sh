@@ -14,23 +14,21 @@ rm ~/.gitignore_global 2> /dev/null
 ln -s $(pwd)/active/git/.gitignore_global ~/.gitignore_global
 printf "Done.\n"
 
-#printf "Adding dotfiles...\n"
-#printf "${GREEN_BOLD}Bash${NORMAL}..."
-#rm ~/.bash_profile 2> /dev/null
-#ln -s $(pwd)/active/bash/.bash_profile ~/.bash_profile
-#rm ~/.bashrc 2> /dev/null
-#ln -s $(pwd)/active/bash/.bashrc ~/.bashrc
-#printf "${GREEN_BOLD}Gitconfig${NORMAL}..."
-# rm ~/.gitconfig 2> /dev/null && cp $(pwd)/active/git/.gitconfig ~/.gitconfig
-# echo -e "\e[31mImportant! Don't forget to add email to .gitconfig\e[0m"
-#printf "${GREEN_BOLD}zshell${NORMAL}..."
-#rm ~/.zshrc 2> /dev/null
-#ln -s $(pwd)/active/zsh/.zshrc ~/.zshrc
-#printf "...Done.\n"
-
 printf "Setting up ${GREEN_BOLD}TMUX${NORMAL}..."
 rm ~/.tmux.conf 2> /dev/null
 ln -s $(pwd)/active/tmux/.tmux.conf ~/.tmux.conf
+printf "Done.\n"
+
+printf "Setting up ${GREEN_BOLD}Zsh${NORMAL}..."
+rm ~/.zshrc 2> /dev/null
+ln -s $(pwd)/active/zsh/.zshrc ~/.zshrc
+printf "Done.\n"
+
+printf "Setting up ${GREEN_BOLD}bash${NORMAL}..."
+rm ~/.bashrc 2> /dev/null
+rm ~/.bash_profile 2> /dev/null
+ln -s $(pwd)/active/bash/.bashrc ~/.bashrc
+ln -s $(pwd)/active/bash/.bash_profile ~/.bash_profile
 printf "Done.\n"
 
 printf "Setting up ${GREEN_BOLD}Zsh${NORMAL}..."
@@ -53,7 +51,15 @@ rm ~/.config/nvim/init.vim 2> /dev/null
 ln -s $(pwd)/active/neovim/init.vim ~/.config/nvim/init.vim
 printf "Done.\n"
 
+printf "Installing Fira Code fonts..."
+brew tap homebrew/cask-fonts
+brew install --cask font-fira-code
+printf "Done.\n"
+
 printf "${IMPORTANT}Important! ${NORMAL}Install powerline fonts inside dotfiles/../others/\n"
 printf "run ${CODE}./active/other/powerline-fonts/install.sh${NORMAL}\n"
+
+printf "${IMPORTANT}Important! ${NORMAL}Install nerd fonts inside dotfiles/../others/\n"
+printf "run ${CODE}./active/other/nerd-fonts/install.sh${NORMAL}\n"
 
 echo "Don't forget to restart the terminal for changes to take effect!"

@@ -15,6 +15,10 @@ printf "Installing ${NOTICE}Oh My Zsh${NORMAL}..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussel/oh-my-zsh/master/tools/install.sh)" 2> /dev/null
 printf "Done.\n"
 
+printf "Getting Powerlevel10k for iTerm command line..."
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+printf "Done.\n"
+
 printf "Installing ${NOTICE}Homebrew${NORMAL}..."
 if eval "brew -v"; then
   printf "Homebrew ${IMPORTANT}detected${NORMAL}.  No install necessary... updating..."
@@ -61,6 +65,7 @@ else
   xcode-select --install 2> /dev/null
   printf "Done.\n"
 fi
+
 
 source setup/run_config.sh
 
