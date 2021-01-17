@@ -66,6 +66,32 @@ else
   printf "Done.\n"
 fi
 
+if eval "pip --version"; then
+  echo "Pip is currently installed."
+  printf "Updating pip to latest version (if needed)..."
+  pip install --upgrade --user pip
+  pip3 install --upgrade --user pip
+  printf "Done.\n"
+
+  printf "Installing virtualenv..."
+  pip install virtualenv
+  pip3 install virtualenv
+  printf "Done.\n"
+else
+  printf "${IMPORTANT}pip not available on this system!!!!${NORMAL}"
+fi
+
+if eval "pip3 --version"; then
+  printf "Updating pip to latest version (if needed)..."
+  pip3 install --upgrade --user pip
+  printf "Done.\n"
+
+  printf "Installing virtualenv..."
+  pip3 install virtualenv
+  printf "Done.\n"
+else
+  printf "${IMPORTANT}pip3 not available on this system!!!!${NORMAL}"
+fi
 
 source setup/run_config.sh
 
