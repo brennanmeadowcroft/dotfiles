@@ -2,6 +2,7 @@
 [user]
 	name = Brennan Meadowcroft
 	email = name@abc.com
+	editor = vim
 [core]
 	excludesfile = ~/.gitignore_global
 [merge]
