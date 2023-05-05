@@ -61,7 +61,6 @@ syntax on
 set background=dark
 colorscheme onedark
 " let g:material_style='palenight'
-let g:airline_theme='onedark'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Custom Commands
@@ -81,12 +80,6 @@ nnoremap <C-C>          :bd<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM Package settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Nerdtree
-let NERDTreeShowHidden=1
-nmap <leader>n :NERDTreeToggle<CR>
-nmap <leader>j :NERDTreeFind<CR>
-let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
-
 " NerdComment
 filetype plugin on
 
@@ -99,54 +92,6 @@ let g:ctrlp_cmd='CtrlP'
 let g:ctrlp_by_filename=0
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --exclude-standard -co']
 
-"vim-airline
-"Add tab line
-let g:airline#extensions#tabline#enabled=1
-let g:airline_theme='base16'
-let g:airline_powerline_fonts=1
-
-"Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%*
-"Ignore certain types of files from linting
-let g:ale_enabled=1
-let g:ale_echo_msg_error_str='Err'
-let g:ale_echo_msg_warning_str='Warn'
-let g:ale_echo_msg_format='[%linter%] %s [%severity%]'
-let g:ale_set_highlights=1
-
-" Hardmode!!!!!!
-let g:HardMode_level='hard'
-let g:HardMode_echo=1
-let g:HardMode_hardmodeMsg='Welcome to HELL!!!!'
-
-"Ack.vim/Silver Searcher
-"use ag as default. Some systems have ack (debian) so if ag isn't available, it will default rather than error
-if executable('ag')
-  let g:ackprg = "ag --vimgrep"
-endif
-nnoremap <Leader>a :Ack!<space>
-
-"indentLine
-set conceallevel=1
-let g:indentLine_conceallevel=1
-let g:indentLine_color_term=239     "Use color values in from terminal colors
-let g:indentLine='┆'
-:set list lcs=tab:——
-nnoremap <Leader>i :IndentLinesToggle<CR>
-
-"devicons
-let g:webdevicons_enable=1
-let g:webdevicons_enable_nerdtree = 1
-let g:webdevicons_enable_airline_statusline = 1
-set encoding=utf8
-set guifont=RobotoMono_Nerd_Font:h11
-
-"Buffergator
-let g:buffergator_viewport_split_policy = 'R'
-nmap <leader>b :BuffergatorToggle<CR>
-let g:buffergator_suppress_keymaps = 1
-
 "Fugitive.vim
 set diffopt+=vertical
 nnoremap <Leader>gs :Gstatus<CR>
@@ -156,10 +101,3 @@ let g:gitgutter_sign_modified="\uf101" " basically: >>
 let g:gitgutter_sign_added="\uf44d" "basically: +
 let g:gitgutter_sign_removed="\uf48b" "basically: -
 let g:gitgutter_sign_removed_first_line="\uf42d" "a collapsing fold
-
-" dbext.vim
-" Source all files in ~/dbext-connections to pull in local db connections
-for rcfile in split(globpath("~/.dbext-connections/", "*.vim"), '\n')
-    execute('source '.rcfile)
-endfor
-let g:dbext_default_PGSQL_pgpass=expand('$HOME/.dbext-connections/.pgpass')
