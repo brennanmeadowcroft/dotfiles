@@ -11,14 +11,6 @@ printf "Initializing submodules\n"
 git submodule init && git submodule update
 printf "Done.\n"
 
-printf "Installing ${NOTICE}Oh My Zsh${NORMAL}..."
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussel/oh-my-zsh/master/tools/install.sh)" 2> /dev/null
-printf "Done.\n"
-
-printf "Getting Powerlevel10k for iTerm command line..."
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-printf "Done.\n"
-
 printf "Installing ${NOTICE}Homebrew${NORMAL}..."
 if eval "brew -v"; then
   printf "Homebrew ${IMPORTANT}detected${NORMAL}.  No install necessary... updating..."
@@ -31,15 +23,17 @@ printf "Done.\n"
 
 printf "Bootstrapping computer setup.  This could take a while...\n"
 printf "Installing basic components \n"
-# Install RVM
-printf "Installing ${NOTICE}RVM${NORMAL}..."
-if eval "rvm -v"; then
-  echo "${IMPORTANT}Already Installed.${NORMAL}\n"
+
+## OSX Command Line
+printf "Installing ${NOTICE}OSX Xcode Command Line Tools${NORMAL}..."
+if eval "xcode-select -v"; then
+  printf "${IMPORTANT}Already Installed.${NORMAL}\n"
 else
-  curl -sSL https://get.rvm.io | bash -s stable --ruby 2> /dev/null
+  xcode-select --install 2> /dev/null
   printf "Done.\n"
 fi
 
+## Programming Language Support
 # Install NVM and node
 printf "Installing ${NOTICE}NVM${NORMAL}..."
 if eval "nvm --version"; then
@@ -52,20 +46,7 @@ else
   printf "Done.\n"
 fi
 
-printf "Installing ${NOTICE}NeoVim${NORMAL}..."
-# This is not installed via the homebrew list because it requries the additional configuration step
-brew install neovim 2> /dev/null
-mkdir -p ~/.config/nvim
-printf "Done.\n"
-
-printf "Installing ${NOTICE}OSX Xcode Command Line Tools${NORMAL}..."
-if eval "xcode-select -v"; then
-  printf "${IMPORTANT}Already Installed.${NORMAL}\n"
-else
-  xcode-select --install 2> /dev/null
-  printf "Done.\n"
-fi
-
+## Python
 if eval "pip --version"; then
   echo "Pip is currently installed."
   printf "Updating pip to latest version (if needed)..."
@@ -92,9 +73,3 @@ if eval "pip3 --version"; then
 else
   printf "${IMPORTANT}pip3 not available on this system!!!!${NORMAL}"
 fi
-
-source setup/run_config.sh
-
-printf "Creating projects folder..."
-mkdir -p ~/projects 2> /dev/null
-printf "Done.\n"

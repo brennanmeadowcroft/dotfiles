@@ -1,0 +1,14 @@
+iterm2
+google-chrome
+firefox
+orion
+spotify
+fantastical
+1password
+visual-studio-code
+karabiner-elements
+raycast
+obsidian
+grammarly
+krisp
+slack

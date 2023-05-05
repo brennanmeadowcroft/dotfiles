@@ -1,9 +1,14 @@
+romkatv/powerlevel10k/powerlevel10k
 coreutils
 vim
-watch
 zsh
 git
 tree
-the_silver_searcher
-neovim
 jq
+rbenv
+ruby-build
+exa
+bat
+trash-cli
+warrensbox/tap/tfswitch
+go

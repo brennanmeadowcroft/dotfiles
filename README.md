@@ -31,16 +31,6 @@ The setup script will install and configure a new machine with necessary softwar
 
 It looks to the txt files in the root directory to identify which software to install via the script.  To add an extra program or package, simply add it to the bottom of the appropriate file.  The value you add to the bottom of the file needs to match what would be used for the install script.  For instance, if you wanted to use `brew install caskroom/cask/brew-cask` then you would append `caskroom/cask/brew-cask`.
 
-| file                      | description                                                            |
-|---------------------------|------------------------------------------------------------------------|
-| `brew-software.txt`       | Packages installed via homebrew                                        |
-| `gems-software.txt`       | Ruby gems to be installed beyond those associated with a given project |
-| `npm-global-software.txt` | Global npm packages                                                    |
-
-## Bash profiles for work
-The current version of `.bash_profile` will check for a "work" specific bash preferences.  This is for things like work-specific command line tools and aliases that aren't applicable for personal applications and side projects.  To enable this
-functionality, create `~/bash_profile-work` and add commands as necessary.
-
 ## Configuration
 Configuration files are available for:
 
@@ -52,10 +42,3 @@ Configuration files are available for:
 - ag
 - atom
 - iterm2
-
-
-# Vim
-### dbext.vim
-This plugin allows for querying databases from inside vim.  However, to keep database connections secure, the credentials are not kept in source control.  `/setup/create_db_connections.sh` will create sample connection and password files in the home directory.  This allows for SQL connections to remain on the machine.
-
-`.vimrc` will attempt to source the connection files on load.  Directions for connecting and switching database profiles are available in the cheatsheet.

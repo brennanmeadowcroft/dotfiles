@@ -8,7 +8,7 @@ NOTICE="\e[${BOLD};${GREEN}m"
 NORMAL="\e[0m"
 
 if [[ -z ${PROFILE} ]]; then
-  printf "Profile variable required! Try using: ${NOTICE}PROFILE={something} ./setup/install-software.sh${NORMAL}\n"
+  printf "Profile variable required! Try using: ${NOTICE}PROFILE={ personal | work } ./setup/install-software.sh${NORMAL}\n"
   exit 1
 fi
 
@@ -34,7 +34,3 @@ cat "$(pwd)/software-list/$CASK_FILE" | xargs brew cask install
 
 printf "Installing homebrew (non-GUI) applications from ${GREEN}${HOMEBREW_FILE}${NORMAL}\n"
 cat "$(pwd)/software-list/$HOMEBREW_FILE" | xargs brew install
-
-printf "Installing ruby and npm global packages\n"
-cat "$(pwd)/software-list/gems-software.txt" | xargs gem install
-cat "$(pwd)/software-list/npm-global-software.txt" | xargs npm install -g

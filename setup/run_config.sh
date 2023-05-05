@@ -14,26 +14,19 @@ rm ~/.gitignore_global 2> /dev/null
 ln -s $(pwd)/active/git/.gitignore_global ~/.gitignore_global
 printf "Done.\n"
 
-printf "Setting up ${GREEN_BOLD}TMUX${NORMAL}..."
-rm ~/.tmux.conf 2> /dev/null
-ln -s $(pwd)/active/tmux/.tmux.conf ~/.tmux.conf
-printf "Done.\n"
+# printf "Setting up ${GREEN_BOLD}TMUX${NORMAL}..."
+# rm ~/.tmux.conf 2> /dev/null
+# ln -s $(pwd)/active/tmux/.tmux.conf ~/.tmux.conf
+# printf "Done.\n"
 
 printf "Setting up ${GREEN_BOLD}Zsh${NORMAL}..."
 rm ~/.zshrc 2> /dev/null
 ln -s $(pwd)/active/zsh/.zshrc ~/.zshrc
 printf "Done.\n"
 
-printf "Setting up ${GREEN_BOLD}bash${NORMAL}..."
-rm ~/.bashrc 2> /dev/null
-rm ~/.bash_profile 2> /dev/null
-ln -s $(pwd)/active/bash/.bashrc ~/.bashrc
-ln -s $(pwd)/active/bash/.bash_profile ~/.bash_profile
-printf "Done.\n"
-
-printf "Setting up ${GREEN_BOLD}Zsh${NORMAL}..."
-rm ~/.zshrc 2> /dev/null
-ln -s $(pwd)/active/zsh/.zshrc ~/.zshrc
+printf "Setting up ${GREEN_BOLD}Powerlevel 10k${NORMAL}..."
+rm ~/.p10k.zsh 2> /dev/null
+ln -s $(pwd)/active/powerlevel10k/.p10k.zsh ~/.p10k.zsh
 printf "Done.\n"
 
 printf "Setting up ${GREEN_BOLD}vim${NORMAL}..."
@@ -46,9 +39,8 @@ ln -s $(pwd)/active/vim/autoload/ ~/.vim/autoload
 ln -s $(pwd)/active/vim/colors/ ~/.vim/colors
 printf "Done.\n"
 
-printf "Setting up ${GREEN_BOLD}NeoVim${NORMAL}..."
-rm ~/.config/nvim/init.vim 2> /dev/null
-ln -s $(pwd)/active/neovim/init.vim ~/.config/nvim/init.vim
+printf "Creating projects folder..."
+mkdir -p ~/projects 2> /dev/null
 printf "Done.\n"
 
 printf "Installing Fira Code fonts..."

@@ -1,1 +1,5 @@
-sketch
+malwarebytes
+aerial
+cardhop
+microsoft-office
+cryptomator

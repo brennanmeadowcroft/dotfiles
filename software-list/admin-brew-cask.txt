@@ -1,6 +1,4 @@
 iterm2
 1password
-private-internet-access
 malware-bytes
 firefox
-appcleaner
