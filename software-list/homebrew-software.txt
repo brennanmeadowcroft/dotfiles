@@ -5,9 +5,7 @@ zsh
 git
 tree
 jq
-rbenv
-ruby-build
-exa
+eza
 bat
 trash-cli
 warrensbox/tap/tfswitch

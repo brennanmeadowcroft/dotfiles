@@ -1,7 +1,9 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-source $(brew --prefix)/opt/powerlevel10k/share/powerlevel10k/powerlevel10k.zsh-theme
+#
+# source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # Download Znap, if it's not there yet. - Znap is a plugin manager for Zsh
 [[ -r ~/dotfiles/active/zsh/plugins/znap/znap.zsh ]] ||
@@ -17,7 +19,6 @@ export PATH="$PATH:$HOME/bin" # warrensbox/tfswitch
 export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 
 # Load language version managers
-eval "$(rbenv init - zsh)"
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
@@ -43,9 +44,9 @@ bindkey -v # Add vim keybindings in zsh
 
 alias cat="bat"
 alias rm="trash"
-alias ls="exa -l -a --long --header --git"
+alias ls="eza -l -a --long --header --git"
 alias tf="terraform"
-alias tree="exa --header --long --tree --level=2"
+alias tree="eza --header --long --tree --level=2"
 alias glog="git log --oneline --decorate --all --graph"
 
 

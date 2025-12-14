@@ -11,6 +11,12 @@ printf "Initializing submodules\n"
 git submodule init && git submodule update
 printf "Done.\n"
 
+printf "Cloning fonts"
+git clone https://github.com/ryanoasis/nerd-fonts.git active/fonts/nerd-fonts
+
+git clone https://github.com/powerline/fonts.git active/fonts/powerline-fonts
+printf "Done.\n"
+
 printf "Installing ${NOTICE}Homebrew${NORMAL}..."
 if eval "brew -v"; then
   printf "Homebrew ${IMPORTANT}detected${NORMAL}.  No install necessary... updating..."
