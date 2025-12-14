@@ -39,6 +39,12 @@ ln -s $(pwd)/active/vim/autoload/ ~/.vim/autoload
 ln -s $(pwd)/active/vim/colors/ ~/.vim/colors
 printf "Done.\n"
 
+printf "Configuring other applications...\n"
+printf "Bat (cat alternative)"
+rm ~/.bat.conf 2> /dev/null
+ln -s $(pwd)/active/bat/.bat.conf ~/.bat.conf
+printf "Done.\n"
+
 printf "Creating projects folder..."
 mkdir -p ~/projects 2> /dev/null
 printf "Done.\n"

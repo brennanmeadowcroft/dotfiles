@@ -40,7 +40,7 @@ if eval "nvm --version"; then
   echo "${IMPORTANT}Already Installed.${NORMAL}\n"
 else
   mkdir -p $NVM_DIR 2> /dev/null
-  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash 2> /dev/null
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash 2> /dev/null
   nvm install stable 2> /dev/null
   nvm alias default stable 2> /dev/null
   printf "Done.\n"

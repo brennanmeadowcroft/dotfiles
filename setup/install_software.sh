@@ -18,7 +18,7 @@ if eval "brew -v"; then
   brew update 2> /dev/null
 else
   printf "Homebrew ${IMPORTANT}NOT detected${NORMAL}... installing now..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" 2> /dev/null
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" 2> /dev/null
 fi
 printf "Done.\n"
 
@@ -27,10 +27,10 @@ COMMON_FILE="brew-cask-common.txt"
 HOMEBREW_FILE="homebrew-software.txt"
 
 printf "Installing common software from ${GREEN}${COMMON_FILE}${NORMAL}\n"
-cat "$(pwd)/software-list/$COMMON_FILE" | xargs brew cask install
+cat "$(pwd)/software-list/$COMMON_FILE" | xargs brew install --cask
 
 printf "Installing profile specific software from ${GREEN}${CASK_FILE}${NORMAL}\n"
-cat "$(pwd)/software-list/$CASK_FILE" | xargs brew cask install
+cat "$(pwd)/software-list/$CASK_FILE" | xargs brew install --cask
 
 printf "Installing homebrew (non-GUI) applications from ${GREEN}${HOMEBREW_FILE}${NORMAL}\n"
 cat "$(pwd)/software-list/$HOMEBREW_FILE" | xargs brew install
